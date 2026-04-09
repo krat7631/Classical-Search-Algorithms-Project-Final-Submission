@@ -1,0 +1,402 @@
+[
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 18,
+    "runtime_seconds": 3.233400093449745e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": null,
+    "config_label": "Baseline (no constraints)"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.2999998691375367e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": null,
+    "config_label": "Baseline (no constraints)"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 82,
+    "runtime_seconds": 8.741700003156438e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": null,
+    "config_label": "Baseline (no constraints)"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 15,
+    "runtime_seconds": 3.7707999581471086e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": null,
+    "config_label": "Baseline (no constraints)",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 7,
+    "runtime_seconds": 7.624999852851033e-06,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 3
+    },
+    "config_label": "max_depth=3",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 7,
+    "runtime_seconds": 7.124999683583155e-06,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 3
+    },
+    "config_label": "max_depth=3",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 16,
+    "runtime_seconds": 1.3666000086232089e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 3
+    },
+    "config_label": "max_depth=3",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 7,
+    "runtime_seconds": 1.2457998309400864e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 3
+    },
+    "config_label": "max_depth=3",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 11,
+    "runtime_seconds": 1.1750000339816324e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth=5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 11,
+    "runtime_seconds": 1.1375001122360118e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth=5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 36,
+    "runtime_seconds": 3.2750000173109584e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth=5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 11,
+    "runtime_seconds": 1.9208000594517216e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth=5",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 18,
+    "runtime_seconds": 2.220799979113508e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions=50"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.062499879684765e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions=50"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 4.933400123263709e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions=50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 15,
+    "runtime_seconds": 3.487499998300336e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions=50",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 18,
+    "runtime_seconds": 2.195799970650114e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 100
+    },
+    "config_label": "max_expansions=100"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.0416999177541584e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 100
+    },
+    "config_label": "max_expansions=100"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 82,
+    "runtime_seconds": 9.370800034957938e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 100
+    },
+    "config_label": "max_expansions=100"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 15,
+    "runtime_seconds": 3.0125000193947926e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "max_expansions": 100
+    },
+    "config_label": "max_expansions=100",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 18,
+    "runtime_seconds": 2.2374999389285222e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_budget=0.01s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.0833000235143118e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_budget=0.01s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 82,
+    "runtime_seconds": 8.491599874105304e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_budget=0.01s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 15,
+    "runtime_seconds": 2.995799877680838e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_budget=0.01s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 18,
+    "runtime_seconds": 2.1916999685345218e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_budget=0.1s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.0375000531203113e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_budget=0.1s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 82,
+    "runtime_seconds": 8.412500028498471e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_budget=0.1s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 15,
+    "runtime_seconds": 2.9834000088158064e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.28,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_budget=0.1s",
+    "nodes_reopened": 0
+  }
+]

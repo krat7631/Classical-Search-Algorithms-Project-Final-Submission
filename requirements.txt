@@ -1,0 +1,7 @@
+# Runtime + plotting dependencies
+pandas
+matplotlib
+seaborn
+
+# Optional test runner (unittest is built into Python and used by default)
+pytest>=7.0.0

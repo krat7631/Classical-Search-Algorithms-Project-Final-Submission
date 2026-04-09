@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor settings
+.idea/
+.vscode/
+
+# Optional local spreadsheet exports
+*.xlsx

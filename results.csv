@@ -1,0 +1,29 @@
+Config,Grid Size,Obstacle Density,Algorithm,Found,Path Cost,Nodes Expanded,Time (s),Failure Reason
+Baseline (no constraints),5x5,0.28,bfs,Yes,8.0,18,3.2e-05,
+Baseline (no constraints),5x5,0.28,dfs,Yes,8.0,17,2.3e-05,
+Baseline (no constraints),5x5,0.28,iddfs,Yes,8.0,82,8.7e-05,
+Baseline (no constraints),5x5,0.28,astar,Yes,8.0,15,3.8e-05,
+max_depth=3,5x5,0.28,bfs,No,-,7,8e-06,depth_limit
+max_depth=3,5x5,0.28,dfs,No,-,7,7e-06,depth_limit
+max_depth=3,5x5,0.28,iddfs,No,-,16,1.4e-05,depth_limit
+max_depth=3,5x5,0.28,astar,No,-,7,1.2e-05,depth_limit
+max_depth=5,5x5,0.28,bfs,No,-,11,1.2e-05,depth_limit
+max_depth=5,5x5,0.28,dfs,No,-,11,1.1e-05,depth_limit
+max_depth=5,5x5,0.28,iddfs,No,-,36,3.3e-05,depth_limit
+max_depth=5,5x5,0.28,astar,No,-,11,1.9e-05,depth_limit
+max_expansions=50,5x5,0.28,bfs,Yes,8.0,18,2.2e-05,
+max_expansions=50,5x5,0.28,dfs,Yes,8.0,17,2.1e-05,
+max_expansions=50,5x5,0.28,iddfs,No,-,50,4.9e-05,expansion_limit
+max_expansions=50,5x5,0.28,astar,Yes,8.0,15,3.5e-05,
+max_expansions=100,5x5,0.28,bfs,Yes,8.0,18,2.2e-05,
+max_expansions=100,5x5,0.28,dfs,Yes,8.0,17,2e-05,
+max_expansions=100,5x5,0.28,iddfs,Yes,8.0,82,9.4e-05,
+max_expansions=100,5x5,0.28,astar,Yes,8.0,15,3e-05,
+time_budget=0.01s,5x5,0.28,bfs,Yes,8.0,18,2.2e-05,
+time_budget=0.01s,5x5,0.28,dfs,Yes,8.0,17,2.1e-05,
+time_budget=0.01s,5x5,0.28,iddfs,Yes,8.0,82,8.5e-05,
+time_budget=0.01s,5x5,0.28,astar,Yes,8.0,15,3e-05,
+time_budget=0.1s,5x5,0.28,bfs,Yes,8.0,18,2.2e-05,
+time_budget=0.1s,5x5,0.28,dfs,Yes,8.0,17,2e-05,
+time_budget=0.1s,5x5,0.28,iddfs,Yes,8.0,82,8.4e-05,
+time_budget=0.1s,5x5,0.28,astar,Yes,8.0,15,3e-05,

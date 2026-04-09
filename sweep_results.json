@@ -1,0 +1,2742 @@
+[
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 5.295799928717315e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 17,
+    "path_cost": 16.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 3.495800046948716e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 928,
+    "runtime_seconds": 0.0007823329997336259,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 7.029100015643053e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 3.291700159024913e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 2.6208001145278104e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 168,
+    "runtime_seconds": 0.00013225000111560803,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.1917000999092124e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 4.5250000766827725e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 17,
+    "path_cost": 16.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.6249999791616574e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 3.96249997720588e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 6.283300172071904e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 4.583299960359e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 17,
+    "path_cost": 16.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.645799941092264e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 928,
+    "runtime_seconds": 0.0008084590008365922,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 6.275000123423524e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 4.587500006891787e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 17,
+    "path_cost": 16.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.604200017231051e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 928,
+    "runtime_seconds": 0.0008064169996941928,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 6.237500019778963e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 4.475000059755985e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 17,
+    "path_cost": 16.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.600000152597204e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 928,
+    "runtime_seconds": 0.0008240829993155785,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 6.158300129754934e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 4.866699964622967e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 17,
+    "path_cost": 16.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.5916999220498838e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 928,
+    "runtime_seconds": 0.000804749999588239,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 6.554200081154704e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 4.2083000153070316e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 17,
+    "path_cost": 16.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 6.704100087517872e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 928,
+    "runtime_seconds": 0.0008438749991910299,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 25,
+    "runtime_seconds": 7.183300112956204e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 4.400000034365803e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 2.8624999686144292e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 824,
+    "runtime_seconds": 0.0007366669997281861,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 6.137500167824328e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": null,
+    "config_label": "baseline",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 3.074999949603807e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.2541000362252817e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 160,
+    "runtime_seconds": 0.0001297919989156071,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 3.7542000427492894e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 4.1833998693618923e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 2.8917000236106105e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 4.091600021638442e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 5.674999920302071e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 4.5540999053628184e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 2.9625000024680048e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 824,
+    "runtime_seconds": 0.0008584999995946418,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 6.200000098033343e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 4.187499871477485e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 2.9000000722589903e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 824,
+    "runtime_seconds": 0.0007415830004902091,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 5.683399831468705e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 4.158299998380244e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 2.895900070143398e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 824,
+    "runtime_seconds": 0.0007377090005320497,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 5.587499981629662e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 4.083400017407257e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 2.79159994533984e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 824,
+    "runtime_seconds": 0.000711500000761589,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 5.4542000725632533e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 4.041700049128849e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 7.404200005112216e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 824,
+    "runtime_seconds": 0.0007120419995771954,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 23,
+    "runtime_seconds": 5.6333999964408576e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.08,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.9417000152752735e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 9,
+    "runtime_seconds": 1.408400021318812e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 367,
+    "runtime_seconds": 0.00031829199906496797,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.516700028034393e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": null,
+    "config_label": "baseline",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 15,
+    "runtime_seconds": 2.2541998987435363e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 14,
+    "runtime_seconds": 1.7374999515595846e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 73,
+    "runtime_seconds": 5.7375000324100256e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 15,
+    "runtime_seconds": 2.9165999876568094e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.658399873529561e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 9,
+    "runtime_seconds": 1.3499999113264494e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 4.1541999962646514e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.41249994764803e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.670800106192473e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 9,
+    "runtime_seconds": 1.3584000043920241e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 367,
+    "runtime_seconds": 0.0003205840002920013,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.470800013223197e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.691700112540275e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 9,
+    "runtime_seconds": 1.341600000159815e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 367,
+    "runtime_seconds": 0.00034241699904669076,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.508300116867758e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.62920000043232e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 9,
+    "runtime_seconds": 1.3499999113264494e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 367,
+    "runtime_seconds": 0.0003327920003357576,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.5000000682193786e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.633300002547912e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 9,
+    "runtime_seconds": 1.3458000466926023e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 367,
+    "runtime_seconds": 0.0003357919995323755,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.5041999328532256e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.6249999538995326e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 9,
+    "runtime_seconds": 1.3750001016887836e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 367,
+    "runtime_seconds": 0.0003332500000396976,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 9,
+    "path_cost": 8.0,
+    "nodes_expanded": 19,
+    "runtime_seconds": 4.450000051292591e-05,
+    "grid_size": "5x5",
+    "obstacle_density": 0.16,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.00016629199853923637,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 55,
+    "path_cost": 54.0,
+    "nodes_expanded": 55,
+    "runtime_seconds": 9.229100032825954e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 9728991,
+    "runtime_seconds": 7.846859083001618,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.0002939590012829285,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": null,
+    "config_label": "baseline",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 3.783300053328276e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 2.4834000214468688e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 170,
+    "runtime_seconds": 0.00014199999895936344,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 21,
+    "runtime_seconds": 4.441599958227016e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 8.933299977798015e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 9.520899948256556e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 4.020799860882107e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 0.0001348329988104524,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.00016899999900488183,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 55,
+    "path_cost": 54.0,
+    "nodes_expanded": 55,
+    "runtime_seconds": 9.225000030710362e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 1230,
+    "runtime_seconds": 0.0010052500001620501,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.00027229199986322783,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.0001678749995335238,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 55,
+    "path_cost": 54.0,
+    "nodes_expanded": 55,
+    "runtime_seconds": 8.99579990800703e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 2424,
+    "runtime_seconds": 0.0020028330000059213,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.0002657919994817348,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.00016870800027390942,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 55,
+    "path_cost": 54.0,
+    "nodes_expanded": 55,
+    "runtime_seconds": 9.045899969351012e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 5612,
+    "runtime_seconds": 0.0050040830010402715,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.00027437499920779373,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.00018258300042361952,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 55,
+    "path_cost": 54.0,
+    "nodes_expanded": 55,
+    "runtime_seconds": 9.158400098385755e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 11334,
+    "runtime_seconds": 0.010005083999203634,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.0002795000000332948,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.00018312499923922587,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 55,
+    "path_cost": 54.0,
+    "nodes_expanded": 55,
+    "runtime_seconds": 9.129099998972379e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 120230,
+    "runtime_seconds": 0.10000529200078745,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 100,
+    "runtime_seconds": 0.0002789999998640269,
+    "grid_size": "10x10",
+    "obstacle_density": 0.0,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 91,
+    "runtime_seconds": 0.00015791700025147293,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 37,
+    "path_cost": 36.0,
+    "nodes_expanded": 37,
+    "runtime_seconds": 5.841699930897448e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 2163273,
+    "runtime_seconds": 1.8004104999999981,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 83,
+    "runtime_seconds": 0.00022508300025947392,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": null,
+    "config_label": "baseline",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 3.0500001230393536e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 2.7042000510846265e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 152,
+    "runtime_seconds": 0.00012349999997240957,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 17,
+    "runtime_seconds": 3.720800123119261e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 8.4916999185225e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 37,
+    "path_cost": 36.0,
+    "nodes_expanded": 37,
+    "runtime_seconds": 5.983300070511177e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 3.816699972958304e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 0.00012741600039589684,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 91,
+    "runtime_seconds": 0.0001531670004624175,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 37,
+    "path_cost": 36.0,
+    "nodes_expanded": 37,
+    "runtime_seconds": 5.958300062047783e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 1097,
+    "runtime_seconds": 0.0010035420000349404,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 83,
+    "runtime_seconds": 0.0002210830007243203,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 91,
+    "runtime_seconds": 0.00015137499940465204,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 37,
+    "path_cost": 36.0,
+    "nodes_expanded": 37,
+    "runtime_seconds": 6.108300112828147e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 2266,
+    "runtime_seconds": 0.0020038749989907956,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 83,
+    "runtime_seconds": 0.00023675000011280645,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 91,
+    "runtime_seconds": 0.0001509160010755295,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 37,
+    "path_cost": 36.0,
+    "nodes_expanded": 37,
+    "runtime_seconds": 6.025000038789585e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 5444,
+    "runtime_seconds": 0.005004624999855878,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 83,
+    "runtime_seconds": 0.0002328749997104751,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 91,
+    "runtime_seconds": 0.00014995899982750416,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 37,
+    "path_cost": 36.0,
+    "nodes_expanded": 37,
+    "runtime_seconds": 6.841699905635323e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 10825,
+    "runtime_seconds": 0.010005708001699531,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 83,
+    "runtime_seconds": 0.0002205420005338965,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 91,
+    "runtime_seconds": 0.00016087499898276292,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 37,
+    "path_cost": 36.0,
+    "nodes_expanded": 37,
+    "runtime_seconds": 5.966599928797223e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 116338,
+    "runtime_seconds": 0.1000085420000687,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 83,
+    "runtime_seconds": 0.00022979200002737343,
+    "grid_size": "10x10",
+    "obstacle_density": 0.09,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 81,
+    "runtime_seconds": 0.0001349160011159256,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 39,
+    "path_cost": 38.0,
+    "nodes_expanded": 40,
+    "runtime_seconds": 5.8000001445179805e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 264436,
+    "runtime_seconds": 0.2405871249993652,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": null,
+    "config_label": "baseline"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 68,
+    "runtime_seconds": 0.00017287499940721318,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": null,
+    "config_label": "baseline",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 13,
+    "runtime_seconds": 2.112500078510493e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 13,
+    "runtime_seconds": 2.0916999346809462e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 85,
+    "runtime_seconds": 8.566599899495486e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 13,
+    "runtime_seconds": 2.6083000193466432e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_depth": 5
+    },
+    "config_label": "max_depth_5",
+    "failure_reason": "depth_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 8.270799844467547e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 39,
+    "path_cost": 38.0,
+    "nodes_expanded": 40,
+    "runtime_seconds": 6.229200153029524e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 4.13329998991685e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 50,
+    "runtime_seconds": 0.0001257090007129591,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "max_expansions": 50
+    },
+    "config_label": "max_expansions_50",
+    "failure_reason": "expansion_limit",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 81,
+    "runtime_seconds": 0.00012983300075575244,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 39,
+    "path_cost": 38.0,
+    "nodes_expanded": 40,
+    "runtime_seconds": 6.191600004967768e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 1097,
+    "runtime_seconds": 0.00100258300153655,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 68,
+    "runtime_seconds": 0.0001810829999158159,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.001
+    },
+    "config_label": "time_0.001s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 81,
+    "runtime_seconds": 0.00013766699885309208,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 39,
+    "path_cost": 38.0,
+    "nodes_expanded": 40,
+    "runtime_seconds": 6.0542000937857665e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 2203,
+    "runtime_seconds": 0.0020039999999426072,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 68,
+    "runtime_seconds": 0.0001756250003381865,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.002
+    },
+    "config_label": "time_0.002s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 81,
+    "runtime_seconds": 0.0001392499998473795,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 39,
+    "path_cost": 38.0,
+    "nodes_expanded": 40,
+    "runtime_seconds": 5.866699939360842e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 5607,
+    "runtime_seconds": 0.005004708998967544,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 68,
+    "runtime_seconds": 0.00017254199883609544,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.005
+    },
+    "config_label": "time_0.005s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 81,
+    "runtime_seconds": 0.00012729100126307458,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 39,
+    "path_cost": 38.0,
+    "nodes_expanded": 40,
+    "runtime_seconds": 5.9750000218627974e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 10737,
+    "runtime_seconds": 0.01000495799962664,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 68,
+    "runtime_seconds": 0.00017954199938685633,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.01
+    },
+    "config_label": "time_0.01s",
+    "nodes_reopened": 0
+  },
+  {
+    "algorithm": "bfs",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 81,
+    "runtime_seconds": 0.00014991600073699374,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "dfs",
+    "solution_found": true,
+    "path_length": 39,
+    "path_cost": 38.0,
+    "nodes_expanded": 40,
+    "runtime_seconds": 6.0208998547750525e-05,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s"
+  },
+  {
+    "algorithm": "iddfs",
+    "solution_found": false,
+    "path_length": 0,
+    "path_cost": 0.0,
+    "nodes_expanded": 107083,
+    "runtime_seconds": 0.10000604100059718,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "failure_reason": "time_budget"
+  },
+  {
+    "algorithm": "astar",
+    "solution_found": true,
+    "path_length": 19,
+    "path_cost": 18.0,
+    "nodes_expanded": 68,
+    "runtime_seconds": 0.00017829199896368664,
+    "grid_size": "10x10",
+    "obstacle_density": 0.19,
+    "constraints": {
+      "time_budget_seconds": 0.1
+    },
+    "config_label": "time_0.1s",
+    "nodes_reopened": 0
+  }
+]
