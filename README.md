@@ -40,6 +40,7 @@ All algorithms support the same resource constraints:
 ├── run_tests.py         # Unit tests (no pytest needed)
 ├── show_results.py      # Format JSON results as table
 ├── export_to_excel.py   # Export JSON to CSV/Excel
+├── make_figures.py      # Figures from final_theory.csv + sweep_results.csv
 └── requirements.txt
 ```
 
@@ -167,6 +168,12 @@ python3 main.py --sweep
 python3 main.py --sweep --format json > sweep_results.json
 ```
 
+**JSON → CSV:** You can export to any CSV filename (for example `my_sweep.csv`). The write-up and `make_figures.py` use the same pipeline with stable names: **`sweep_results.json` → `sweep_results.csv`** via `export_to_excel.py`. That mirrors the **`main.py --all`** flow, where people often save **`results.json` → `results.csv`** for a smaller baseline table—not the full multi-grid sweep.
+
+```bash
+python3 export_to_excel.py sweep_results.json sweep_results.csv
+```
+
 ### Run different grid sizes
 
 | Command | Grid sizes | Use case |
@@ -238,8 +245,11 @@ python3 main.py --theory-report
 python3 main.py --theory-sweep --format json > theory_results.json
 python3 main.py --theory-sweep --max-size 10 --format json > theory_results.json
 
-# Export theory results to CSV
+# Export theory results to CSV (any name works for your own analysis)
 python3 export_to_excel.py theory_results.json theory_results.csv
+
+# Same JSON; report + make_figures.py expect this output name:
+python3 export_to_excel.py theory_results.json final_theory.csv
 ```
 
 ### Theory metrics
@@ -251,6 +261,6 @@ python3 export_to_excel.py theory_results.json theory_results.csv
 
 ## Academic Use
 
-The code is structured to support clear **Methods** (algorithm implementations, constraint handling) and **Results** (metrics from `run_experiment` / `run_sweep` / theory experiments, reproducible via `main.py --all`, `--sweep`, or `--theory-sweep --format json`).
+The code is structured to support clear **Methods** (algorithm implementations, constraint handling) and **Results** (metrics from `run_experiment` / `run_sweep` / theory experiments, reproducible via `main.py --all`, `--sweep`, or `--theory-sweep --format json`). For tables and figures aligned with a written report, export **`sweep_results.json` → `sweep_results.csv`** and **`theory_results.json` → `final_theory.csv`**, then run `python3 make_figures.py`.
 
 
