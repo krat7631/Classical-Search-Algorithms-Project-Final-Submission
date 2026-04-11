@@ -1,10 +1,16 @@
-# save as: make_figures.py
-# run from: /Users/devanshnayak/Desktop/Final project
-#
-# Usage:
-#   python3 make_figures.py
-#
-# Outputs PNG files into ./figures/
+"""
+Publication-style figures from exported experiment CSVs.
+
+Expects:
+  - final_theory.csv — from export_to_excel.py on theory JSON (theory sweep output)
+  - sweep_results.csv — from export_to_excel.py on sweep JSON
+
+Column names match export_to_excel.py headers. Run from the project root:
+
+  python3 make_figures.py
+
+Writes PNGs under ./figures/
+"""
 
 import os
 import pandas as pd
@@ -224,7 +230,8 @@ def fig6_scaling_runtime(sweep: pd.DataFrame):
     plt.close()
 
 
-def main():
+def main() -> None:
+    """Load theory + sweep CSVs and regenerate all report figures."""
     os.makedirs(OUT_DIR, exist_ok=True)
 
     theory = pd.read_csv(THEORY_CSV)

@@ -57,14 +57,17 @@ def astar_theory(
             failure_reason = "expansion_limit"
             break
 
-        # Heap tuple layout: (f, tie_breaker, g, state)
+        # Heap tuple layout: (f, tie_breaker, g, state). The same state can appear
+        # multiple times on the heap (each relax pushes a new tuple). Older entries
+        # carry superseded (larger) g values and must be ignored.
         f, _, g, state = heapq.heappop(open_list)
 
-        # Stale entry: we already found a better path to this state
+        # Duplicate / stale open-list entry: already closed this state with a strictly
+        # better g than this tuple's g (leftover heap junk from before we closed).
         if state in closed and g_score.get(state, float("inf")) < g:
             continue
 
-        # Skip if we have a better g already (stale heap entry)
+        # Stale entry: best known g_score[state] is already lower than this pop's g.
         if g > g_score.get(state, float("inf")):
             continue
 
@@ -105,7 +108,9 @@ def astar_theory(
                     )
 
             if new_g < old_g:
-                # Reopening: successor was already expanded (in closed)
+                # Reopening: if h is inconsistent, a cheaper path to successor can appear
+                # after successor was already expanded and placed in closed; we must allow
+                # another expansion, so we drop successor from closed and count a reopening.
                 if successor in closed:
                     nodes_reopened += 1
                     closed.discard(successor)
@@ -122,6 +127,8 @@ def astar_theory(
                 heapq.heappush(open_list, (f_new, next(tie_counter), new_g, successor))
 
     runtime = time.perf_counter() - start_time
+    # No goal found: if a depth cap was in effect and the open list drained, we hit the
+    # depth frontier before proving reachability; otherwise the frontier is exhausted.
     if failure_reason == "exhausted" and constraints.max_depth is not None:
         failure_reason = "depth_limit"
     return SearchResult(

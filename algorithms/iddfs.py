@@ -28,7 +28,9 @@ def _dls(
     """
     Depth-Limited Search: DFS with a depth cutoff.
     Returns (goal_state_if_found, cutoff_reached).
-    failure_reason list is mutated when we hit time/expansion limits.
+
+    nodes_expanded and failure_reason are length-1 lists so nested recursive calls can
+    mutate the same counters (Python integers are immutable; lists give shared state).
     """
     if constraints.time_budget_seconds is not None:
         if time.perf_counter() - start_time > constraints.time_budget_seconds:
@@ -61,7 +63,8 @@ def _dls(
                 return result, False
             if cutoff:
                 cutoff_occurred = True
-            del parent[successor]  # backtrack
+            # Standard DFS backtrack: undo this branch so siblings explore a fresh path.
+            del parent[successor]
 
     return None, cutoff_occurred
 
@@ -85,6 +88,7 @@ def iddfs(
     constraints = constraints or SearchConstraints()
     start_time = time.perf_counter()
     total_expansions = 0
+    # Mutable single-element list so _dls can set stop reason without nonlocal.
     failure_reason: list = ["exhausted"]
 
     depth_limit = 0
