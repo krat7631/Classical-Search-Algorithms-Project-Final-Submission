@@ -15,7 +15,6 @@ Example usage:
 import argparse
 import json
 import sys
-from typing import Optional
 
 # Add project root to path
 sys.path.insert(0, ".")
@@ -24,7 +23,7 @@ from environment.grid_world import GridWorld
 from algorithms.base import SearchConstraints
 from algorithms.heuristics import make_heuristic
 from algorithms.astar_theory import astar_theory
-from evaluation.runner import run_experiment, run_single, run_sweep, TIME_BUDGET_STRESS
+from evaluation.runner import run_experiment, run_sweep, TIME_BUDGET_STRESS
 from evaluation.theory_experiments import run_theory_experiment, run_theory_sweep, format_theory_report
 
 

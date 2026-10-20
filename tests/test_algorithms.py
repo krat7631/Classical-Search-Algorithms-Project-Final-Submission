@@ -10,7 +10,7 @@ import unittest
 
 sys.path.insert(0, ".")
 
-from environment.grid_world import GridWorld, State
+from environment.grid_world import GridWorld
 from algorithms.base import SearchConstraints
 from algorithms.bfs import bfs
 from algorithms.dfs import dfs
