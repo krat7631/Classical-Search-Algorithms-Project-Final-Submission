@@ -1,266 +1,130 @@
-# Classical Search Algorithms: Implementation and Evaluation
+# Classical Search Algorithms: Implementation, Theory and Benchmarks
 
-Academic project implementing and evaluating classical AI search algorithms under explicit resource constraints.
+BFS, DFS, IDDFS and A* implemented from scratch in pure Python, evaluated in two ways:
 
-## Problem Domain
+1. **Theory experiments on generated grids** (the original Northeastern course project): each A* guarantee
+   from Hart, Nilsson & Raphael (1968) — admissibility, consistency, re-expansion — measured directly, plus
+   behaviour under depth, expansion and wall-clock limits. Full write-up: [`docs/report.pdf`](docs/report.pdf).
+2. **The Moving AI Lab benchmark** (Sturtevant, 2012), the standard test set for grid pathfinding: 500
+   problems on 10 real game and city maps, every one with a published optimal answer to check against.
 
-Grid-based pathfinding: navigate from a start cell to a goal cell on a 2D grid with obstacles. Deterministic, 4-directional movement, uniform step cost of 1.
+## Results at a glance
 
-## Algorithms Implemented
+| Check | Result |
+|---|---|
+| Optimal algorithms vs published optima, 500 benchmark problems | **500 / 500 match** (Dijkstra and A*, to within 1e-4) |
+| A* vs Dijkstra, median nodes expanded | **4.95× fewer** (2.2× on game maps, 12× on city maps) |
+| Weighted A* (w = 2) without re-expansions vs A* | **2.4× fewer expansions**, paths 4.2% longer on average |
+| Weighted A* suboptimality bound (cost ≤ w × optimal) | **Held on every problem** (worst case 26.8% above optimal at w = 2, bound 100%) |
+| Admissible heuristics on generated grids, 270 runs | **100% optimal**; weighted A* 86.7–100% optimal depending on w |
+| Property tests across 40 random grids per guarantee | **415 tests pass** |
 
-| Algorithm | Description |
-|-----------|-------------|
-| **BFS** | Breadth-First Search; optimal for uniform costs |
-| **DFS** | Depth-First Search; not optimal |
-| **IDDFS** | Iterative Deepening DFS; optimal, memory-efficient |
-| **A*** | A* with Manhattan distance heuristic; optimal |
+## Benchmark: Moving AI maps
 
-All algorithms support the same resource constraints:
+Six Dragon Age: Origins maps (194×194 to 481×530) and four 256×256 city street maps, 50 problems each,
+sampled evenly across the difficulty buckets of each scenario file (path lengths 1 to 1,018). Movement is
+8-directional with diagonal cost √2 and no corner cutting — the benchmark's own rules — so path costs are
+directly comparable with the published optima.
 
-- `max_depth`: maximum search depth
-- `max_expansions`: maximum number of node expansions
-- `time_budget_seconds`: wall-clock time limit
+| Algorithm | Matches optimum | Mean / max cost above optimal | Expansions vs A* (median) | Mean re-expansions |
+|---|---|---|---|---|
+| Dijkstra (A* with h = 0) | 100% | 0 / 0% | 4.95× | 0 |
+| A*, octile heuristic | 100% | 0 / 0% | 1.00× | 0 |
+| Weighted A*, w = 1.5, re-expanding | 33% | 2.2 / 14.8% | 0.85× | 12,614 |
+| Weighted A*, w = 1.5, no re-expansion | 27% | 2.8 / 15.6% | **0.57×** | 0 |
+| Weighted A*, w = 2.0, re-expanding | 26% | 3.4 / 26.8% | 0.74× | 16,333 |
+| Weighted A*, w = 2.0, no re-expansion | 22% | 4.2 / 26.8% | **0.42×** | 0 |
 
-## Project Structure
+What the benchmark shows:
+
+- **The heuristic matters most where the map is open.** On city maps A* expands 12× fewer nodes than
+  Dijkstra; on maze-like game maps, where walls make straight-line distance a weaker guide, 2.2×. For short
+  paths the gap is 35× (median 80 vs 2,841 expansions); for paths over 800 it shrinks to 1.16×, because both
+  searches end up covering most of the map.
+- **Re-expansions are where weighted A* loses its speed.** With w > 1 the heuristic is inconsistent, so A*
+  keeps finding cheaper paths to nodes it already expanded. Re-expanding them costs 1.5–1.8× the work for
+  under a percentage point of path quality; skipping them keeps the w-suboptimality guarantee and is the
+  faster choice.
+- **Tie-breaking made no measurable difference** (FIFO vs larger-g: 1.01×). With √2 diagonal costs, exact
+  ties in f are rare, so the textbook advice to break ties towards larger g has little to act on here.
+
+![Nodes expanded vs path length](figures/fig7_benchmark_expansions.png)
+![Weighted A* with and without re-expansions](figures/fig8_weighted_astar_reopening.png)
+
+Raw results: [`results/benchmark_results.csv`](results/benchmark_results.csv) (3,500 runs) ·
+summary: [`results/benchmark_summary.json`](results/benchmark_summary.json) ·
+tie-breaking per map: [`figures/fig9_tie_breaking.png`](figures/fig9_tie_breaking.png).
+
+## Theory experiments on generated grids
+
+Seeded random 4-directional grids (5×5 and 10×10, obstacle densities 0–20%, five seeds), with BFS as the
+optimal-cost reference.
+
+- Every admissible A* variant (h = 0, Manhattan, scaled w ≤ 1, and an admissible-but-inconsistent heuristic)
+  matched BFS cost on **100%** of 270 runs.
+- Weighted A*: w = 1.2 stayed 100% optimal; w = 1.5 fell to 93.3%; w = 2.0 and 3.0 to 86.7%. Whenever a
+  gap appeared it was exactly 2 steps. Mean expansions fell from ~52 (w = 1) to ~16 (w = 1.2) and ~14.
+- The inconsistent heuristic triggered consistency violations while remaining optimal, separating
+  "violations observed" from "optimality lost".
+- Under resource limits, IDDFS failed most often (27 of 192 constrained runs), mostly on time budgets: its
+  repeated deepening costs 928 expansions on an empty 5×5 grid where BFS and A* need 25.
+
+| | |
+|---|---|
+| ![](figures/fig2_weight_tradeoff.png) | ![](figures/fig5_failure_reasons.png) |
+| ![](figures/fig3_consistency_reopenings.png) | ![](figures/fig6_scaling_runtime.png) |
+
+## Implementation
 
 ```
-├── environment/
-│   └── grid_world.py    # Grid environment, State, SearchResult
-├── algorithms/
-│   ├── base.py          # SearchConstraints
-│   ├── heuristics.py    # h_zero, h_manhattan, h_scaled, h_inconsistent
-│   ├── astar_theory.py  # A* with reopening, consistency checks
-│   ├── bfs.py, dfs.py, iddfs.py, astar.py
-├── evaluation/
-│   ├── runner.py        # Experiment runner
-│   └── theory_experiments.py  # BFS + A* variants, theory report
-├── tests/
-│   └── test_algorithms.py
-├── main.py              # CLI entry point
-├── run_tests.py         # Unit tests (no pytest needed)
-├── show_results.py      # Format JSON results as table
-├── export_to_excel.py   # Export JSON to CSV/Excel
-├── make_figures.py      # Figures from final_theory.csv + sweep_results.csv
-└── requirements.txt
+environment/
+  grid_world.py   grid, successors (4- or 8-directional, no corner cutting), Manhattan and octile distances
+  movingai.py     Moving AI .map / .scen parser
+algorithms/
+  bfs.py, dfs.py, iddfs.py
+  astar_theory.py A*: explicit open/closed lists, optional re-expansion, tie-breaking policy,
+                  online consistency checks, node and memory counters
+  heuristics.py   zero, Manhattan, scaled, inconsistent, octile, scaled octile
+evaluation/
+  runner.py, theory_experiments.py   course experiments
+  benchmark.py, summarize_benchmark.py
 ```
 
-## Quick Start
+Every algorithm honours the same resource limits (`max_depth`, `max_expansions`, `time_budget_seconds`) and
+reports why it stopped. Things worth knowing about the A* implementation:
 
-Clone and enter the repository:
+- **Floating-point tolerance.** √2 step costs make two equally short paths differ by ~1e-15, which a naive
+  `new_g < old_g` comparison treats as an improvement — A* then "re-opens" nodes it should not and the
+  consistency checker flags violations that do not exist. Comparisons use a 1e-9 tolerance; a property test
+  asserts that A* with a consistent heuristic never re-opens a node.
+- **Defaults reproduce the course results.** The tie-breaking, re-expansion and 8-directional options all
+  default to the original behaviour; re-running the theory sweep reproduces all 270 committed results
+  exactly.
+
+## Run it
+
+Python 3.10+; the algorithms use only the standard library.
 
 ```bash
-git clone https://github.com/krat7631/Classical-Search-Algorithms-Project-Final-Submission.git
-cd Classical-Search-Algorithms-Project-Final-Submission
+pip install -r requirements.txt
+python main.py                    # four algorithms on the default grid
+python main.py --all              # baseline vs constrained runs
+make test                         # 415 unit and property tests
+make reproduce                    # course experiments, Moving AI benchmark (~5 min), figures
 ```
 
-Then run files in this order:
-
-| Order | Command | Purpose |
-|:-----:|---------|---------|
-| 1 | `python3 main.py` | Run all four algorithms on the default grid (no constraints) |
-| 2 | `python3 run_tests.py` | Run tests to verify correctness |
-| 3 | `python3 main.py --all` | Compare baseline vs constrained runs |
-| 3b | `python3 main.py --sweep` | Full sweep (grid sizes, densities, time stress) |
-| 4 | `python3 main.py --all --format json > results.json` | Save results to JSON for analysis |
-| 5 | `python3 show_results.py results.json` | Print a formatted table for your report |
-| 6 | `python3 export_to_excel.py results.json results.csv` | Export to CSV (open in Excel) |
+Other entry points:
 
 ```bash
-# 1. Run algorithms (baseline)
-python3 main.py
-
-# 2. Run tests
-python3 run_tests.py
-
-# 3. Compare with constraints
-python3 main.py --all
-
-# 4–6. For formatted table and CSV/Excel
-python3 main.py --all --format json > results.json
-python3 show_results.py results.json
-python3 export_to_excel.py results.json results.csv
+python main.py --heuristic scaled --weight 1.5      # weighted A*
+python main.py --heuristic inconsistent --trace     # watch re-expansions and consistency violations
+python main.py --theory-report                      # theory validation report
+python -m evaluation.benchmark --per-map 5 --quick  # fast benchmark check
 ```
 
-## Usage
+## References
 
-### Run experiments
-
-```bash
-# Baseline (no constraints)
-python3 main.py
-
-# With constraints
-python3 main.py --max-depth 5
-python3 main.py --max-expansions 100
-python3 main.py --time-budget 0.1
-
-# Run baseline + multiple constraint configs
-python3 main.py --all
-
-# JSON output for data collection (save to file)
-python3 main.py --all --format json > results.json
-```
-
-### Run tests
-
-```bash
-python3 run_tests.py
-```
-
-Or with pytest (if installed):
-
-```bash
-pytest tests/ -v
-```
-
-### Format results as a table
-
-After generating JSON results:
-
-```bash
-python3 main.py --all --format json > results.json
-python3 show_results.py results.json
-```
-
-This prints a formatted table for your Methods/Results section.
-
-### Export to results.csv (for Excel)
-
-To get `results.csv` (open in Excel):
-
-```bash
-python3 main.py --all --format json > results.json
-python3 export_to_excel.py results.json results.csv
-```
-
-## Metrics Collected
-
-Each run logs:
-
-- `solution_found`: whether a path was found
-- `path_cost`: cost of solution (number of steps for uniform cost)
-- `path_length`: number of states in path
-- `nodes_expanded`: number of node expansions
-- `runtime_seconds`: wall-clock time
-- `failure_reason`: when no solution (time_budget, expansion_limit, depth_limit, exhausted)
-- `grid_size`: e.g. "5x5", "10x10"
-- `obstacle_density`: fraction of cells blocked (0.0–1.0)
-
-## Experimental Evaluation (Sweep)
-
-### Variable environment scaling
-
-Generate grids with variable size and obstacle density:
-
-```python
-from environment.grid_world import generate_grid_world
-
-env = generate_grid_world(rows=10, cols=10, obstacle_density=0.2, seed=42)
-# start=(0,0), goal=(rows-1, cols-1); deterministic when seed is set
-```
-
-### Full sweep (grid sizes, densities, constraints)
-
-Sweeps over grid sizes (5×5, 10×10, 15×15), obstacle densities (0%, 10%, 20%), and constraints including tight time budgets (0.001s, 0.002s, 0.005s). Rows are exported in raw form so you can aggregate them differently for tables vs figures:
-
-```bash
-python3 main.py --sweep
-python3 main.py --sweep --format json > sweep_results.json
-```
-
-**JSON → CSV:** You can export to any CSV filename (for example `my_sweep.csv`). The write-up and `make_figures.py` use the same pipeline with stable names: **`sweep_results.json` → `sweep_results.csv`** via `export_to_excel.py`. That mirrors the **`main.py --all`** flow, where people often save **`results.json` → `results.csv`** for a smaller baseline table—not the full multi-grid sweep.
-
-```bash
-python3 export_to_excel.py sweep_results.json sweep_results.csv
-```
-
-### Run different grid sizes
-
-| Command | Grid sizes | Use case |
-|---------|------------|----------|
-| `python3 main.py --sweep --quick` | 5×5 only | Fast feedback (~10 seconds) |
-| `python3 main.py --sweep --max-size 10` | 5×5, 10×10 | Skip 15×15 (~1 minute) |
-| `python3 main.py --sweep` | 5×5, 10×10, 15×15 | Full sweep (15×15 can take 10+ minutes) |
-
-Examples:
-
-```bash
-# Quick run (5×5 only, fewer configs)
-python3 main.py --sweep --quick
-
-# Sweep up to 10×10 (skip slow 15×15)
-python3 main.py --sweep --max-size 10 --format json > sweep_results.json
-
-# Full sweep including 15×15 (slow; use to show scalability limits)
-python3 main.py --sweep --format json > sweep_results.json
-```
-
-### Programmatic sweep
-
-```python
-from evaluation.runner import run_sweep
-from algorithms.base import SearchConstraints
-
-results = run_sweep(
-    grid_sizes=[(5,5), (10,10), (15,15)],
-    obstacle_densities=[0.0, 0.1, 0.2],
-    constraint_configs=[
-        ("baseline", None),
-        ("time_0.001", SearchConstraints(time_budget_seconds=0.001)),
-    ],
-    seed=42,
-)
-```
-
-## Theory Experiments (Hart, Nilsson, Raphael 1968)
-
-Validates A* theoretical properties: admissibility, consistency, reopenings, optimality.
-
-### Heuristic variants
-
-| Heuristic | Admissible | Consistent | Use |
-|-----------|------------|------------|-----|
-| `zero` | Yes | Yes | UCS baseline |
-| `manhattan` | Yes | Yes | Standard A* |
-| `scaled` (w≤1) | Yes | Yes | Weighted A* |
-| `scaled` (w>1) | No | No | Suboptimality test |
-| `inconsistent` | Yes | No | Reopening test |
-
-### Commands
-
-```bash
-# A* with specific heuristic
-python3 main.py --heuristic zero
-python3 main.py --heuristic manhattan
-python3 main.py --heuristic scaled --weight 1.5
-python3 main.py --heuristic inconsistent
-
-# Trace reopenings and consistency violations
-python3 main.py --heuristic inconsistent --trace
-
-# Theory report (BFS + A* variants, structured analysis)
-python3 main.py --theory-report
-
-# Theory sweep (grid sizes up to 20×20, 5 seeds)
-python3 main.py --theory-sweep --format json > theory_results.json
-python3 main.py --theory-sweep --max-size 10 --format json > theory_results.json
-
-# Export theory results to CSV (any name works for your own analysis)
-python3 export_to_excel.py theory_results.json theory_results.csv
-
-# Same JSON; report + make_figures.py expect this output name:
-python3 export_to_excel.py theory_results.json final_theory.csv
-```
-
-### Theory metrics
-
-- `nodes_reopened`: nodes re-added to open after being expanded (inconsistent heuristics)
-- `consistency_violations_detected`: h(n) > c(n,n') + h(n') count
-- `optimal`: path cost equals BFS (optimal) cost
-- `suboptimality_gap`: path_cost - optimal_cost when non-admissible
-
-## Academic Use
-
-The code is structured to support clear **Methods** (algorithm implementations, constraint handling) and **Results** (metrics from `run_experiment` / `run_sweep` / theory experiments, reproducible via `main.py --all`, `--sweep`, or `--theory-sweep --format json`). For tables and figures aligned with a written report, export **`sweep_results.json` → `sweep_results.csv`** and **`theory_results.json` → `final_theory.csv`**, then run `python3 make_figures.py`.
-
-
+- P. E. Hart, N. J. Nilsson and B. Raphael, "A formal basis for the heuristic determination of minimum cost
+  paths," *IEEE Transactions on Systems Science and Cybernetics*, 4(2), 1968.
+- N. Sturtevant, "Benchmarks for grid-based pathfinding," *IEEE Transactions on Computational Intelligence
+  and AI in Games*, 4(2), 2012. Maps and scenarios from [movingai.com/benchmarks](https://movingai.com/benchmarks/).
