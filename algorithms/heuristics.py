@@ -61,8 +61,8 @@ def make_heuristic(
 
     Args:
         env: GridWorld (for goal reference)
-        name: zero | manhattan | scaled | inconsistent
-        weight: for scaled heuristic only
+        name: zero | manhattan | scaled | inconsistent | octile | scaled_octile
+        weight: for scaled and scaled_octile only
     """
     if name == "zero":
         return lambda s: h_zero(env, s)
@@ -72,4 +72,8 @@ def make_heuristic(
         return h_scaled(env, weight)
     if name == "inconsistent":
         return lambda s: h_inconsistent(env, s)
+    if name == "octile":
+        return env.octile_distance
+    if name == "scaled_octile":
+        return lambda s: weight * env.octile_distance(s)
     raise ValueError(f"Unknown heuristic: {name}")

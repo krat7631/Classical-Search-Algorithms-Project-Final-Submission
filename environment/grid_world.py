@@ -3,12 +3,17 @@ Grid World Environment for Classical Search Algorithms
 
 A deterministic grid-based pathfinding domain where an agent moves from
 a start cell to a goal cell, avoiding obstacles.
-- Actions: 4-directional movement (up, down, left, right)
-- Cost: uniform 1 per step (for path cost metrics)
+- Actions: 4-directional movement (up, down, left, right), or 8-directional
+  with diagonal=True
+- Cost: 1 per orthogonal step; sqrt(2) per diagonal step
+
+Diagonal moves follow the Moving AI benchmark rules: a diagonal step is allowed
+only when both orthogonal cells it passes between are free (no corner cutting).
 
 Supports variable grid sizes and obstacle density via generate_grid_world().
 """
 
+import math
 import random
 from collections import deque
 from dataclasses import dataclass, field
@@ -41,6 +46,7 @@ class SearchResult:
     consistency_violations_detected: Optional[int] = None
     optimal: Optional[bool] = None  # path_cost equals optimal (e.g. BFS) cost
     suboptimality_gap: Optional[float] = None  # path_cost - optimal_cost when non-admissible
+    nodes_generated: Optional[int] = None  # distinct states stored: the memory footprint
 
     def to_dict(self) -> dict:
         d = {
@@ -60,6 +66,8 @@ class SearchResult:
             d["optimal"] = self.optimal
         if self.suboptimality_gap is not None:
             d["suboptimality_gap"] = self.suboptimality_gap
+        if self.nodes_generated is not None:
+            d["nodes_generated"] = self.nodes_generated
         return d
 
 
@@ -77,12 +85,15 @@ class GridWorld:
         (0, -1),  # left
         (0, 1),   # right
     ]
+    DIAGONAL_ACTIONS: List[Tuple[int, int]] = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+    DIAGONAL_COST = math.sqrt(2)
 
     def __init__(
         self,
         grid: List[List[int]],
         start: Tuple[int, int],
         goal: Tuple[int, int],
+        diagonal: bool = False,
     ):
         """
         Initialize the grid world.
@@ -91,12 +102,14 @@ class GridWorld:
             grid: 2D list where 0=traversable, 1=obstacle
             start: (row, col) start position
             goal: (row, col) goal position
+            diagonal: allow 8-directional movement (sqrt(2) per diagonal step)
         """
         self.grid = grid
         self.rows = len(grid)
         self.cols = len(grid[0]) if grid else 0
         self.start = State(start[0], start[1])
         self.goal = State(goal[0], goal[1])
+        self.diagonal = diagonal
         self._validate()
 
     def _validate(self) -> None:
@@ -131,7 +144,22 @@ class GridWorld:
             nr, nc = state.row + dr, state.col + dc
             if self._in_bounds(nr, nc) and not self._is_obstacle(nr, nc):
                 successors.append((State(nr, nc), 1.0))
+        if self.diagonal:
+            for dr, dc in self.DIAGONAL_ACTIONS:
+                nr, nc = state.row + dr, state.col + dc
+                if (self._in_bounds(nr, nc) and not self._is_obstacle(nr, nc)
+                        and not self._is_obstacle(state.row + dr, state.col)
+                        and not self._is_obstacle(state.row, state.col + dc)):
+                    successors.append((State(nr, nc), self.DIAGONAL_COST))
         return successors
+
+    def octile_distance(self, state: State) -> float:
+        """
+        Admissible, consistent heuristic for 8-directional movement:
+        the cost of the shortest path on an empty grid.
+        """
+        dr, dc = abs(state.row - self.goal.row), abs(state.col - self.goal.col)
+        return max(dr, dc) + (self.DIAGONAL_COST - 1) * min(dr, dc)
 
     def manhattan_distance(self, state: State) -> float:
         """
