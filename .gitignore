@@ -14,3 +14,7 @@ env/
 
 # Optional local spreadsheet exports
 *.xlsx
+
+# Downloaded Moving AI benchmark maps (see scripts/download_benchmarks.py)
+benchmarks/
+logs/
