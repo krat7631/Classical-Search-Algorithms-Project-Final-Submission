@@ -5,12 +5,9 @@ Compares BFS (optimal baseline), A* with h=0 (UCS), A* with admissible heuristic
 A* with inconsistent heuristic, and weighted A*.
 """
 
-import json
-import sys
 from typing import Any, Dict, List, Optional
 
 from environment.grid_world import GridWorld, generate_grid_world
-from algorithms.base import SearchConstraints
 from algorithms.bfs import bfs
 from algorithms.heuristics import make_heuristic
 from algorithms.astar_theory import astar_theory

@@ -2,8 +2,8 @@
 Publication-style figures from exported experiment CSVs.
 
 Expects:
-  - final_theory.csv — from export_to_excel.py on theory JSON (theory sweep output)
-  - sweep_results.csv — from export_to_excel.py on sweep JSON
+  - results/final_theory.csv — from export_to_excel.py on theory JSON (theory sweep output)
+  - results/sweep_results.csv — from export_to_excel.py on sweep JSON
 
 Column names match export_to_excel.py headers. Run from the project root:
 
@@ -19,8 +19,8 @@ import seaborn as sns
 
 sns.set_theme(style="whitegrid")
 
-THEORY_CSV = "final_theory.csv"
-SWEEP_CSV = "sweep_results.csv"
+THEORY_CSV = os.path.join("results", "final_theory.csv")
+SWEEP_CSV = os.path.join("results", "sweep_results.csv")
 OUT_DIR = "figures"
 
 
@@ -70,7 +70,7 @@ def fig1_astar_vs_bfs_optimality(theory: pd.DataFrame):
     plot_df = plot_df.sort_values("Algorithm")
 
     plt.figure(figsize=(10, 5))
-    sns.barplot(data=plot_df, x="Algorithm", y="Path Cost", palette="viridis")
+    sns.barplot(data=plot_df, x="Algorithm", y="Path Cost", hue="Algorithm", legend=False, palette="viridis")
     plt.title("Figure 1: Mean Path Cost on Baseline Instance")
     plt.xticks(rotation=30, ha="right")
     plt.tight_layout()
@@ -163,7 +163,7 @@ def fig4_admissible_heuristic_comparison(theory: pd.DataFrame):
     agg = df.groupby("label", as_index=False)["Nodes Expanded"].mean().sort_values("Nodes Expanded")
 
     plt.figure(figsize=(10, 5))
-    sns.barplot(data=agg, x="label", y="Nodes Expanded", palette="magma")
+    sns.barplot(data=agg, x="label", y="Nodes Expanded", hue="label", legend=False, palette="magma")
     plt.title("Figure 4: Admissible Heuristics vs Mean Nodes Expanded")
     plt.xlabel("Heuristic")
     plt.ylabel("Mean Nodes Expanded")
@@ -182,7 +182,7 @@ def fig5_failure_reason_distribution(sweep: pd.DataFrame):
     # normalize found column
     if "Found" in df.columns:
         found = _to_bool(df["Found"])
-        df = df[found == False]  # failures only
+        df = df[found.eq(False)]  # failures only (unparseable values are excluded, not counted)
     else:
         return
 

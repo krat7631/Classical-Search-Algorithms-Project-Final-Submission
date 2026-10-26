@@ -1,0 +1,96 @@
+{
+  "maps": [
+    "Berlin_0_256",
+    "Boston_0_256",
+    "London_0_256",
+    "NewYork_0_256",
+    "arena2",
+    "brc202d",
+    "den520d",
+    "lak303d",
+    "orz100d",
+    "ost003d"
+  ],
+  "problems": 500,
+  "optimal_algorithms_all_match_published_optima": true,
+  "weighted_astar_within_w_bound": true,
+  "algorithms": {
+    "astar_fifo": {
+      "problems": 500,
+      "matches_published_optimum": 1.0,
+      "mean_suboptimality_pct": 0.0,
+      "max_suboptimality_pct": 0.0,
+      "median_nodes_expanded": 4387,
+      "median_expansion_ratio_vs_astar": 1.006,
+      "median_runtime_ratio_vs_astar": 0.948,
+      "mean_nodes_reopened": 0.0,
+      "median_nodes_generated": 4742
+    },
+    "astar_high_g": {
+      "problems": 500,
+      "matches_published_optimum": 1.0,
+      "mean_suboptimality_pct": 0.0,
+      "max_suboptimality_pct": 0.0,
+      "median_nodes_expanded": 4332,
+      "median_expansion_ratio_vs_astar": 1.0,
+      "median_runtime_ratio_vs_astar": 1.0,
+      "mean_nodes_reopened": 0.0,
+      "median_nodes_generated": 4692
+    },
+    "dijkstra": {
+      "problems": 500,
+      "matches_published_optimum": 1.0,
+      "mean_suboptimality_pct": 0.0,
+      "max_suboptimality_pct": 0.0,
+      "median_nodes_expanded": 18542,
+      "median_expansion_ratio_vs_astar": 4.949,
+      "median_runtime_ratio_vs_astar": 3.458,
+      "mean_nodes_reopened": 0.0,
+      "median_nodes_generated": 18812
+    },
+    "wastar_1.5_no_reopen": {
+      "problems": 500,
+      "matches_published_optimum": 0.266,
+      "mean_suboptimality_pct": 2.749,
+      "max_suboptimality_pct": 15.597,
+      "median_nodes_expanded": 1013,
+      "median_expansion_ratio_vs_astar": 0.573,
+      "median_runtime_ratio_vs_astar": 0.589,
+      "mean_nodes_reopened": 0.0,
+      "median_nodes_generated": 1593
+    },
+    "wastar_1.5_reopen": {
+      "problems": 500,
+      "matches_published_optimum": 0.332,
+      "mean_suboptimality_pct": 2.201,
+      "max_suboptimality_pct": 14.765,
+      "median_nodes_expanded": 1863,
+      "median_expansion_ratio_vs_astar": 0.846,
+      "median_runtime_ratio_vs_astar": 0.859,
+      "mean_nodes_reopened": 12613.8,
+      "median_nodes_generated": 1584
+    },
+    "wastar_2.0_no_reopen": {
+      "problems": 500,
+      "matches_published_optimum": 0.224,
+      "mean_suboptimality_pct": 4.186,
+      "max_suboptimality_pct": 26.755,
+      "median_nodes_expanded": 705,
+      "median_expansion_ratio_vs_astar": 0.425,
+      "median_runtime_ratio_vs_astar": 0.423,
+      "mean_nodes_reopened": 0.0,
+      "median_nodes_generated": 1235
+    },
+    "wastar_2.0_reopen": {
+      "problems": 500,
+      "matches_published_optimum": 0.26,
+      "mean_suboptimality_pct": 3.411,
+      "max_suboptimality_pct": 26.755,
+      "median_nodes_expanded": 1099,
+      "median_expansion_ratio_vs_astar": 0.741,
+      "median_runtime_ratio_vs_astar": 0.757,
+      "mean_nodes_reopened": 16332.8,
+      "median_nodes_generated": 1229
+    }
+  }
+}
